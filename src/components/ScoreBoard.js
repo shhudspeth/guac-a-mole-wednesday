@@ -1,7 +1,7 @@
 import React, { useRef, useEffect, useState } from 'react'
 
 function ScoreBoard() {
-    const [score, setScore] = React.useState(0)
+    const [score, setScore] = useState(0)
 
 
     return (

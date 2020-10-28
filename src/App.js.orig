@@ -15,7 +15,6 @@ function App() {
     <div>
       <ScoreContext.Provider value={score}>
         <Canvas />
-<<<<<<< HEAD
         <div className='row'>
           <Chip />
           <Chip />
@@ -23,8 +22,6 @@ function App() {
           <Chip />
           <Chip />
         </div>
-=======
->>>>>>> 47bfc6ab5dd065b97566782dabc7c21602cbf4d5
         <ScoreBoard />
       </ScoreContext.Provider>
         <Chip />
