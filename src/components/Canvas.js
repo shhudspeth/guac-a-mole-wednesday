@@ -1,5 +1,7 @@
 import React, { useRef, useEffect, useState } from 'react'
 // import Chip from "./components/Chip"
+// import ScoreBoard from "./components/ScoreBoard"
+
 
 
 const Canvas = props => {
@@ -7,7 +9,7 @@ const Canvas = props => {
     const canvasRef = useRef(null)
 
     const avocado_positions = [
-        { x: 50, y: 150},
+        { x: 50, y: 150,},
         { x: 100, y: 225},
         { x: 100, y: 300}, 
         { x: 150, y: 100},
@@ -87,10 +89,19 @@ const Canvas = props => {
         return () => clearInterval(interval);
       }, []);
 
+    function avocadoClick(position, ctx, event) {
+        // Do we need to add an onClick element to the canvas in the return?
+        // this onCLick could trigger avocado click, which would check the location
+        // of the event.  
+        // Then check if that location is within the pixel range of current avocado
+        // range can be determined by start being x,y in array and end being
+        // x,y + size of avocado (currently 100px)
+    }
+
     
     return (
             <div>
-                {/* <Chip /> */}
+                {/* <div id="score">Score: {score}</div> */}
                 <canvas id="canvas" width="500px" height="500px" ref={canvasRef} {...props}/>
             </div>  
     )
