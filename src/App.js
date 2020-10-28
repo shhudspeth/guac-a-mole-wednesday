@@ -8,7 +8,13 @@ function App() {
   return (
     <div>
         <Canvas />
-        <Chip />
+        <div className='row'>
+          <Chip />
+          <Chip />
+          <Chip />
+          <Chip />
+          <Chip />
+        </div>
         <ScoreBoard />
   
     </div>
