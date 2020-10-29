@@ -1,5 +1,6 @@
 import React, { useRef, useEffect, useState, useContext } from 'react'
 import ScoreContext from "../App"
+import ScoreBoard from "./ScoreBoard"
 // import Chip from "./components/Chip"
 // import ScoreBoard from "./components/ScoreBoard"
 
@@ -143,6 +144,7 @@ const Canvas = props => {
     return (
             <div>
                 <canvas id="canvas" onClick={handleClick} width="500px" height="500px" ref={canvasRef} {...props}/>
+                <ScoreBoard score={score} />
             </div>  
     )
   
