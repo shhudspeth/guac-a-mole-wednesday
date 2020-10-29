@@ -61,8 +61,8 @@ const Canvas = props => {
     }
 
     const newBoard = new Image()
-    newBoard.src = 'guac-weds/public/cuttingboard.png'
-    const small_avocado = 'guac-weds/public/small_avocado.png'
+    newBoard.src = 'https://larenaiocco.github.io/guac-a-mole-wednesday/cuttingboard.png'
+    const small_avocado = 'https://larenaiocco.github.io/guac-a-mole-wednesday/small_avocado.png'
     const newAvocado = new Image()
     newAvocado.src = small_avocado
 
