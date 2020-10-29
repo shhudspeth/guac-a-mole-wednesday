@@ -61,8 +61,8 @@ const Canvas = props => {
     }
 
     const newBoard = new Image()
-    newBoard.src = '../../cuttingboard.png'
-    const small_avocado = '../../small_avocado.png'
+    newBoard.src = 'public/cuttingboard.png'
+    const small_avocado = 'public/small_avocado.png'
     const newAvocado = new Image()
     newAvocado.src = small_avocado
 
@@ -140,7 +140,7 @@ const Canvas = props => {
                 if(countMisses==1){
                     setMissed1(false);
                     //TRIGGER GAME OVER AND RESET!
-                    
+
                 }
                 setCountMisses(countMisses -1)
                 console.log(countMisses, "COUNTMISSES")
