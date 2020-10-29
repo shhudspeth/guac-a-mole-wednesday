@@ -33,6 +33,9 @@ const Canvas = props => {
     const [score, setScore] = React.useState(0);
     console.log(score)
 
+    // set source for gameoverbanner
+    const gameOverSource = '../../Guacamole.gif'
+
     // SET ALL CHIPS TO DISPLAY #TRUE
     const [missed1, setMissed1] = useState(true);
     const [missed2, setMissed2] = useState(true);
@@ -41,6 +44,10 @@ const Canvas = props => {
     const [missed5, setMissed5] = useState(true);
 
     const [countMisses, setCountMisses] = useState(5)
+
+
+    // MAKE GAMEOVERBANNER APPEAR OR DISAPPEAR
+    const [showGameOver, setShowGameOver] = useState(false)
 
     //FUNCTION TO INCREMENT THE SCORE FOR A HIT
     function increment(score) {
@@ -109,6 +116,19 @@ const Canvas = props => {
 
 
     })
+
+    // RESET GAME:
+    function resetAvocados(){
+        setScore(0)
+        setMissed1(true)
+        setMissed2(true)
+        setMissed3(true)
+        setMissed4(true)
+        setMissed5(true)
+        setShowGameOver(false)
+
+
+    }
     function handleClick(event) {
         const xPosition = event.clientX
         const yPosition = event.clientY
@@ -141,6 +161,7 @@ const Canvas = props => {
                 if(countMisses==1){
                     setMissed1(false);
                     //TRIGGER GAME OVER AND RESET!
+                    setShowGameOver(true)
                 }
                 setCountMisses(countMisses -1)
                 console.log(countMisses, "COUNTMISSES")
@@ -179,9 +200,9 @@ const Canvas = props => {
                  {missed2 &&  <Chip />}
                  {missed3 &&  <Chip />}
                  {missed4 &&  <Chip />}
-                 {missed5 &&  <Chip />}
-                   
+                 {missed5 &&  <Chip />} 
                 </div>
+                {showGameOver && <img src={gameOverSource} onClick={resetAvocados} width="700px" height="500px"/>}
 
                 <div className="row">
                     <canvas id="canvas" onClick={handleClick} width="500px" height="500px" ref={canvasRef} {...props}/>

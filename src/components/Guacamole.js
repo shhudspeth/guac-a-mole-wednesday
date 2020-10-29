@@ -4,10 +4,11 @@ const Guacamole = props => {
     
     const guacSource = '../../Guacamole.png'
     
-    return <img src={guacSource} width="150px" height="150px"/>
+    return  (<div className="guac" id="guacbowl">
+                <img src={guacSource} width="150px" height="150px"/>
+            </div>)
 
 }
-
 
 export default Guacamole
 

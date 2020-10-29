@@ -1,7 +1,7 @@
 import React from "react";
 import Canvas from "./components/Canvas"
 import Chip from "./components/Chip"
-import ScoreBoard from "./components/ScoreBoard"
+
 
 
 const score = 0; 
@@ -20,13 +20,6 @@ function App() {
     <div>
       <ScoreContext.Provider value={score}>
         <Canvas />
-        <div className='row'>
-          <Chip />
-          <Chip />
-          <Chip />
-          <Chip />
-          <Chip />
-        </div>
         
       </ScoreContext.Provider>
        
