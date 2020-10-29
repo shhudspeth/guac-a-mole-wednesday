@@ -1,9 +1,8 @@
 import React, { useRef, useEffect, useState, useContext } from 'react'
 import ScoreContext from "../App"
 import ScoreBoard from "./ScoreBoard"
-// import Chip from "./components/Chip"
-// import ScoreBoard from "./components/ScoreBoard"
-
+import Guacamole from "./Guacamole"
+import Chip from "./Chip"
 
 const Canvas = props => {
     
@@ -33,6 +32,17 @@ const Canvas = props => {
     console.log(mainscore, "GLOBALTHING")
     const [score, setScore] = React.useState(0);
     console.log(score)
+
+    // SET ALL CHIPS TO DISPLAY #TRUE
+    const [missed1, setMissed1] = useState(true);
+    const [missed2, setMissed2] = useState(true);
+    const [missed3, setMissed3] = useState(true);
+    const [missed4, setMissed4] = useState(true);
+    const [missed5, setMissed5] = useState(true);
+
+    const [countMisses, setCountMisses] = useState(5)
+
+    //FUNCTION TO INCREMENT THE SCORE FOR A HIT
     function increment(score) {
         setScore(score + 100)
     }
@@ -105,7 +115,9 @@ const Canvas = props => {
         // alert(`x: ${xPosition} y:${yPosition}`)
         const gameStateX = gameState.avoPosition.x
         const gameStateY = gameState.avoPosition.y
-        if (((gameStateX + 100) > xPosition && xPosition > gameStateX) && ((gameStateY + 100) > yPosition && yPosition > gameStateY)) {
+
+        // i moved the tortilla chips to be aboev the canvas: this resulted in a 220 pixel difference between clicks and avocado positions.
+        if (((gameStateX + 100) > xPosition && xPosition > gameStateX) && ((gameStateY + 220) > yPosition && yPosition > gameStateY)) {
             increment(score)
             alert(`You got the avocado  x: ${xPosition} y: ${yPosition}  gameX: ${gameStateX} gamey: ${gameStateY} SCORE: ${score} `)
                 //  increase score count
@@ -113,6 +125,25 @@ const Canvas = props => {
                 
             } else {
                 alert(`You Missed  x: ${xPosition} y: ${yPosition}  gameX: ${gameStateX} gamey: ${gameStateY}`)
+                console.log(countMisses)
+                if (countMisses==5){
+                    setMissed5(false);   
+                }
+                if(countMisses==4){
+                    setMissed4(false);
+                }
+                if(countMisses==3){
+                    setMissed3(false);
+                }
+                if(countMisses==2){
+                    setMissed2(false);
+                }
+                if(countMisses==1){
+                    setMissed1(false);
+                    //TRIGGER GAME OVER AND RESET!
+                }
+                setCountMisses(countMisses -1)
+                console.log(countMisses, "COUNTMISSES")
                 // decrease chips
                 // check if chips == 0
             }
@@ -142,9 +173,29 @@ const Canvas = props => {
 
     
     return (
-            <div>
-                <canvas id="canvas" onClick={handleClick} width="500px" height="500px" ref={canvasRef} {...props}/>
-                <ScoreBoard score={score} />
+            <div className="container">
+                <div className='row'>
+                 {missed1 &&  <Chip />}
+                 {missed2 &&  <Chip />}
+                 {missed3 &&  <Chip />}
+                 {missed4 &&  <Chip />}
+                 {missed5 &&  <Chip />}
+                   
+                </div>
+
+                <div className="row">
+                    <canvas id="canvas" onClick={handleClick} width="500px" height="500px" ref={canvasRef} {...props}/>
+                </div>
+                <div className= "row">
+                    <div className = "col">
+                        <ScoreBoard score={score} />
+                    </div>
+                    <div className = "col">
+                        <Guacamole />
+                    </div>
+                </div>
+
+                
             </div>  
     )
   
