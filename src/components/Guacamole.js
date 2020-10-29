@@ -2,7 +2,7 @@ import React, { useRef, useEffect, useState } from 'react'
 
 const Guacamole = props => {
     
-    const guacSource = 'https://shhudspeth.github.io/guac-a-mole-wednesday/Guacamole.png'
+    const guacSource = 'https://shhudspeth.github.io/guac-a-mole-wednesday/public/Guacamole.png'
     
     return  (<div className="guac" id="guacbowl">
                 <img src={guacSource} width="150px" height="150px"/>
