@@ -2,7 +2,7 @@ import React, { useRef, useEffect, useState } from 'react'
 
 const Chip = props => {
     
-    const chipSource = 'https://github.com/shhudspeth/guac-a-mole-wednesday/public/tortilla.png'
+    const chipSource = '../public/tortilla.png'
     
     return <img src={chipSource} width="150px" height="150px"/>
 
