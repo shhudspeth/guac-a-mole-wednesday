@@ -1,5 +1,5 @@
 import React, { useRef, useEffect, useState, useContext } from 'react'
-import {score, ScoreContext} from "../App"
+import ScoreContext from "../App"
 // import Chip from "./components/Chip"
 // import ScoreBoard from "./components/ScoreBoard"
 
@@ -27,7 +27,16 @@ const Canvas = props => {
                     }
 
     const [ gameState, setGameState ] = useState(initState)
-    const {score} = useContext(ScoreContext)
+    // trying to lift score state using useContext
+    const mainscore = useContext(ScoreContext)
+    console.log(mainscore, "GLOBALTHING")
+    const [score, setScore] = React.useState(0);
+    console.log(score)
+    function increment(score) {
+        setScore(score + 100)
+    }
+
+    
     // let score = useContext(ScoreContext);
     console.log(score)
 
@@ -96,7 +105,7 @@ const Canvas = props => {
         const gameStateX = gameState.avoPosition.x
         const gameStateY = gameState.avoPosition.y
         if (((gameStateX + 100) > xPosition && xPosition > gameStateX) && ((gameStateY + 100) > yPosition && yPosition > gameStateY)) {
-            // score  = score + 100
+            increment(score)
             alert(`You got the avocado  x: ${xPosition} y: ${yPosition}  gameX: ${gameStateX} gamey: ${gameStateY} SCORE: ${score} `)
                 //  increase score count
                 

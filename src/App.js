@@ -4,18 +4,22 @@ import Chip from "./components/Chip"
 import ScoreBoard from "./components/ScoreBoard"
 
 
-export const score = 0
- export const ScoreContext = React.createContext(score)
+const score = 0; 
+export const ScoreContext = React.createContext(0);
 
+// const findContext = () => {
+//     const {score, increment} = useContext(ScoreContext)
+// }
 
 
 function App() {
+  const [score, setScore] = React.useState(0);
+  console.log(score)
   
   return (
     <div>
       <ScoreContext.Provider value={score}>
         <Canvas />
-<<<<<<< HEAD
         <div className='row'>
           <Chip />
           <Chip />
@@ -23,11 +27,9 @@ function App() {
           <Chip />
           <Chip />
         </div>
-=======
->>>>>>> 47bfc6ab5dd065b97566782dabc7c21602cbf4d5
         <ScoreBoard />
       </ScoreContext.Provider>
-        <Chip />
+       
   
     </div>
   )
