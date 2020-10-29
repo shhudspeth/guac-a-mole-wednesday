@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.js": "/guac-a-mole-wednesday/static/js/main.f14cebec.chunk.js",
+    "main.js.map": "/guac-a-mole-wednesday/static/js/main.f14cebec.chunk.js.map",
+    "runtime-main.js": "/guac-a-mole-wednesday/static/js/runtime-main.bb3bb95a.js",
+    "runtime-main.js.map": "/guac-a-mole-wednesday/static/js/runtime-main.bb3bb95a.js.map",
+    "static/js/2.27621c64.chunk.js": "/guac-a-mole-wednesday/static/js/2.27621c64.chunk.js",
+    "static/js/2.27621c64.chunk.js.map": "/guac-a-mole-wednesday/static/js/2.27621c64.chunk.js.map",
+    "index.html": "/guac-a-mole-wednesday/index.html",
+    "static/js/2.27621c64.chunk.js.LICENSE.txt": "/guac-a-mole-wednesday/static/js/2.27621c64.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.bb3bb95a.js",
+    "static/js/2.27621c64.chunk.js",
+    "static/js/main.f14cebec.chunk.js"
+  ]
+}
