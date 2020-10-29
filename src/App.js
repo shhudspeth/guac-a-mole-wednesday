@@ -34,7 +34,7 @@ function App() {
 
     const[showInstructions, setShowInstructions] = React.useState(false)
     console.log(showInstructions)
-  
+    
     return (<React.Fragment>
       <button onClick={()=>setShowInstructions(!showInstructions)}>
         Instructions
@@ -61,11 +61,12 @@ function App() {
   };
   
 
+
   return (
     <div>
       <Greeting />
       <Authors />
-      <ShowInstructions />
+      <ShowInstructions  />
       <ScoreContext.Provider value={score}>
       <Canvas />
         
