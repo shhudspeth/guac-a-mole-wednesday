@@ -13,8 +13,8 @@ export const ScoreContext = React.createContext(0);
 
 
 function App() {
-  const [score, setScore] = React.useState(0);
-  console.log(score)
+  // const [score, setScore] = React.useState(0);
+  // console.log(score)
   
   return (
     <div>
