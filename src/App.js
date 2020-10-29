@@ -21,11 +21,6 @@ function App() {
       <ScoreContext.Provider value={score}>
         <Canvas />
         <div className='row'>
-          <Chip />
-          <Chip />
-          <Chip />
-          <Chip />
-          <Chip />
         </div>
         
       </ScoreContext.Provider>

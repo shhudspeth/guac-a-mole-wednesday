@@ -21,7 +21,6 @@ const Canvas = props => {
     ];
 
     const initState = { 
-                        // timer: 0, 
                         cells: new Array(9).fill(false),
                         avoPosition: {x: 0, y: 0}
                     }
@@ -119,12 +118,12 @@ const Canvas = props => {
         // i moved the tortilla chips to be aboev the canvas: this resulted in a 220 pixel difference between clicks and avocado positions.
         if (((gameStateX + 100) > xPosition && xPosition > gameStateX) && ((gameStateY + 220) > yPosition && yPosition > gameStateY)) {
             increment(score)
-            alert(`You got the avocado  x: ${xPosition} y: ${yPosition}  gameX: ${gameStateX} gamey: ${gameStateY} SCORE: ${score} `)
+            alert("You got the avocado!")
                 //  increase score count
                 
                 
             } else {
-                alert(`You Missed  x: ${xPosition} y: ${yPosition}  gameX: ${gameStateX} gamey: ${gameStateY}`)
+                alert("You Missed!")
                 console.log(countMisses)
                 if (countMisses==5){
                     setMissed5(false);   
@@ -141,6 +140,7 @@ const Canvas = props => {
                 if(countMisses==1){
                     setMissed1(false);
                     //TRIGGER GAME OVER AND RESET!
+                    
                 }
                 setCountMisses(countMisses -1)
                 console.log(countMisses, "COUNTMISSES")
@@ -150,9 +150,6 @@ const Canvas = props => {
 
     }
 
-    // andleClick = () => {
-    //     console.log('this is:', this);
-    //   }
 
     console.log("I ran this func again")
     useEffect(() => {
@@ -160,16 +157,8 @@ const Canvas = props => {
             updateState();
         }, 3000);
         return () => clearInterval(interval);
-      }, []);
+    }, []);
 
-    function avocadoClick(position, ctx, event) {
-        // Do we need to add an onClick element to the canvas in the return?
-        // this onCLick could trigger avocado click, which would check the location
-        // of the event.  
-        // Then check if that location is within the pixel range of current avocado
-        // range can be determined by start being x,y in array and end being
-        // x,y + size of avocado (currently 100px)
-    }
 
     
     return (
