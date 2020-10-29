@@ -145,26 +145,22 @@ const Canvas = props => {
             } else {
                 alert("You Missed!")
                 console.log(countMisses)
-                if (countMisses==5){
+                if (countMisses===5){
                     setMissed5(false);   
                 }
-                if(countMisses==4){
+                if(countMisses===4){
                     setMissed4(false);
                 }
-                if(countMisses==3){
+                if(countMisses===3){
                     setMissed3(false);
                 }
-                if(countMisses==2){
+                if(countMisses===2){
                     setMissed2(false);
                 }
-                if(countMisses==1){
+                if(countMisses===1){
                     setMissed1(false);
                     //TRIGGER GAME OVER AND RESET!
-<<<<<<< HEAD
                     setShowGameOver(true)
-=======
-
->>>>>>> 7c0e68211bdb2f4dccf1257502d3101cab0f153e
                 }
                 setCountMisses(countMisses -1)
                 console.log(countMisses, "COUNTMISSES")
@@ -194,7 +190,7 @@ const Canvas = props => {
                  {missed4 &&  <Chip />}
                  {missed5 &&  <Chip />} 
                 </div>
-                {showGameOver && <img src={gameOverSource} onClick={resetAvocados} width="700px" height="500px"/>}
+                {showGameOver && <img src={gameOverSource} alt="Game Over!" onClick={resetAvocados} width="700px" height="500px"/>}
 
                 <div className="row">
                     <canvas id="canvas" onClick={handleClick} width="500px" height="500px" ref={canvasRef} {...props}/>
