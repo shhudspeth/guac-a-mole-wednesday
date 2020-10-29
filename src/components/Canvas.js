@@ -125,6 +125,7 @@ const Canvas = props => {
         setMissed4(true)
         setMissed5(true)
         setShowGameOver(false)
+        setCountMisses(5)
 
 
     }
@@ -134,12 +135,13 @@ const Canvas = props => {
         // alert(`x: ${xPosition} y:${yPosition}`)
         const gameStateX = gameState.avoPosition.x
         const gameStateY = gameState.avoPosition.y
-
+        console.log(xPosition, yPosition, "MouseCLICK!")
         // i moved the tortilla chips to be aboev the canvas: this resulted in a 220 pixel difference between clicks and avocado positions.
-        if (((gameStateX + 100) > xPosition && xPosition > gameStateX) && ((gameStateY + 220) > yPosition && yPosition > gameStateY)) {
+        if (((gameStateX + 150) > xPosition && xPosition > gameStateX) && ((gameStateY + 390) > yPosition && yPosition > gameStateY)) {
             increment(score)
             alert("You got the avocado!")
                 //  increase score count
+            
                 
                 
             } else {
