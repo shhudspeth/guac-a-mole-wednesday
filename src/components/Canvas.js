@@ -33,7 +33,7 @@ const Canvas = props => {
     console.log(score)
 
     // set source for gameoverbanner
-    const gameOverSource = '../../Guacamole.gif'
+    const gameOverSource = '/Guacamole.gif'
 
     // SET ALL CHIPS TO DISPLAY #TRUE
     const [missed1, setMissed1] = useState(true);
@@ -68,8 +68,8 @@ const Canvas = props => {
     }
 
     const newBoard = new Image()
-    newBoard.src = 'https://larenaiocco.github.io/guac-a-mole-wednesday/cuttingboard.png'
-    const small_avocado = 'https://larenaiocco.github.io/guac-a-mole-wednesday/small_avocado.png'
+    newBoard.src = '/cuttingboard.png'
+    const small_avocado = '/small_avocado.png'
     const newAvocado = new Image()
     newAvocado.src = small_avocado
 
@@ -130,22 +130,22 @@ const Canvas = props => {
 
     }
     function handleClick(event) {
-        const xPosition = event.clientX
-        const yPosition = event.clientY
+        const xPosition = event.nativeEvent.offsetX
+        const yPosition = event.nativeEvent.offsetY
         // alert(`x: ${xPosition} y:${yPosition}`)
         const gameStateX = gameState.avoPosition.x
         const gameStateY = gameState.avoPosition.y
-        console.log(xPosition, yPosition, "MouseCLICK!")
+        // alert(`x:${xPosition}, y:${yPosition}, "MouseCLICK!", ${gameStateX}, ${gameStateY}`)
         // i moved the tortilla chips to be aboev the canvas: this resulted in a 220 pixel difference between clicks and avocado positions.
-        if (((gameStateX + 150) > xPosition && xPosition > gameStateX) && ((gameStateY + 390) > yPosition && yPosition > gameStateY)) {
+        if (((gameStateX + 100) > xPosition && xPosition > gameStateX) && ((gameStateY + 100) > yPosition && yPosition > gameStateY)) {
             increment(score)
-            alert("You got the avocado!")
+            //alert("You got the avocado!")
                 //  increase score count
             
                 
                 
             } else {
-                alert("You Missed!")
+                //alert("You Missed!")
                 console.log(countMisses)
                 if (countMisses===5){
                     setMissed5(false);   
