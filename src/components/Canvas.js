@@ -179,7 +179,7 @@ const Canvas = props => {
             updateState();
         }, 3000);
         return () => clearInterval(interval);
-    }, []);
+    });
 
 
     

@@ -1,13 +1,13 @@
-import React, { useRef, useEffect, useState } from 'react'
+
 
 const Chip = props => {
     
     const chipSource = '/tortilla.png'
     
-    return <img src={chipSource} width="150px" height="150px"/>
+    return <img src={chipSource} width="150px" height="150px" alt="tortilla-chip-life"/>
 
 }
-const chipArray = [Chip, Chip, Chip, Chip, Chip]
+
 
 
 

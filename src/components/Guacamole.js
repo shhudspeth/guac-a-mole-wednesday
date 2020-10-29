@@ -1,11 +1,11 @@
-import React, { useRef, useEffect, useState } from 'react'
+
 
 const Guacamole = props => {
     
     const guacSource = '/Guacamole.png'
     
     return  (<div className="guac" id="guacbowl">
-                <img src={guacSource} width="150px" height="150px"/>
+                <img src={guacSource} width="150px" height="150px" alt="guacamole-bowl"/>
             </div>)
 
 }
