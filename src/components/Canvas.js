@@ -33,7 +33,7 @@ const Canvas = props => {
     console.log(score)
 
     // set source for gameoverbanner
-    const gameOverSource = 'https://shhudspeth.github.io/guac-a-mole-wednesday/public/Guacamole.gif'
+    const gameOverSource = 'https://github.com/shhudspeth/guac-a-mole-wednesday/blob/master/public/Guacamole.gif'
 
     // SET ALL CHIPS TO DISPLAY #TRUE
     const [missed1, setMissed1] = useState(true);
@@ -68,8 +68,8 @@ const Canvas = props => {
     }
 
     const newBoard = new Image()
-    newBoard.src = 'https://shhudspeth.github.io/guac-a-mole-wednesday/public/cuttingboard.png'
-    const small_avocado = 'https://shhudspeth.github.io/guac-a-mole-wednesday/public/small_avocado.png'
+    newBoard.src = 'https://github.com/shhudspeth/guac-a-mole-wednesday/blob/master/public/cuttingboard.png'
+    const small_avocado = 'https://github.com/shhudspeth/guac-a-mole-wednesday/blob/master/public/small_avocado.png'
     const newAvocado = new Image()
     newAvocado.src = small_avocado
 
