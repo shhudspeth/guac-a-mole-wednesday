@@ -13,13 +13,18 @@ export const ScoreContext = React.createContext(0);
 
 
 function App() {
-  const [score, setScore] = React.useState(0);
-  console.log(score)
+  // const [score, setScore] = React.useState(0);
+  // console.log(score)
   
   return (
     <div>
       <ScoreContext.Provider value={score}>
         <Canvas />
+<<<<<<< HEAD
+=======
+        <div className='row'>
+        </div>
+>>>>>>> 7c0e68211bdb2f4dccf1257502d3101cab0f153e
         
       </ScoreContext.Provider>
        
