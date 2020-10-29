@@ -1,13 +1,12 @@
 import React, { useRef, useEffect, useState } from 'react'
 
-function ScoreBoard() {
-    const [score, setScore] = useState(0)
-
+function ScoreBoard(props) {
+    
 
     return (
         <div>
-            <button onClick={() => setScore(score + 1)}>Click Here</button>
-            <div>Score: {score}</div>
+            
+            <div>Score: {props.score}</div>
         </div>
     )
 }

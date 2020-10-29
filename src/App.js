@@ -27,7 +27,7 @@ function App() {
           <Chip />
           <Chip />
         </div>
-        <ScoreBoard />
+        
       </ScoreContext.Provider>
        
   
