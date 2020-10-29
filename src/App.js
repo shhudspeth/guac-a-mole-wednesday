@@ -52,7 +52,7 @@ function App() {
           Here are some game instructions<br />
           <ol>
           <li>Select your level</li>
-          <li>Collect as many avocados as you can to make guacomole</li>
+          <li>Collect as many avocados as you can to make guacamole</li>
           <li>5 misses is game over (Lose a tortilla chip for each miss)</li>
           <li> Click banner to restart the game!</li>
           </ol>

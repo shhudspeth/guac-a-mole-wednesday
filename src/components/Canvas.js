@@ -33,7 +33,7 @@ const Canvas = props => {
     console.log(score)
 
     // set source for gameoverbanner
-    const gameOverSource = '/public/Guacamole.gif'
+    const gameOverSource = '/Guacamole.gif'
 
     // SET ALL CHIPS TO DISPLAY #TRUE
     const [missed1, setMissed1] = useState(true);
