@@ -68,8 +68,8 @@ const Canvas = props => {
     }
 
     const newBoard = new Image()
-    newBoard.src = '/cuttingboard.png'
-    const small_avocado = '/small_avocado.png'
+    newBoard.src = 'cuttingboard.png'
+    const small_avocado = 'small_avocado.png'
     const newAvocado = new Image()
     newAvocado.src = small_avocado
 

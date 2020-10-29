@@ -1,10 +1,9 @@
 
-
+import chipImg from '../../public/tortilla.png'
 const Chip = props => {
     
-    const chipSource = '/tortilla.png'
     
-    return <img src={chipSource} width="150px" height="150px" alt="tortilla-chip-life"/>
+    return <img src={chipImg} width="150px" height="150px" alt="tortilla-chip-life"/>
 
 }
 
