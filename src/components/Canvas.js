@@ -3,6 +3,9 @@ import ScoreContext from "../App"
 import ScoreBoard from "./ScoreBoard"
 import Guacamole from "./Guacamole"
 import Chip from "./Chip"
+import cuttingBoard from "./assets/cuttingboard.png"
+import gameOverSource from "./assets/Guacamole.gif"
+import small_avocado from "./assets/small_avocado.png"
 
 const Canvas = props => {
     
@@ -32,8 +35,7 @@ const Canvas = props => {
     const [score, setScore] = React.useState(0);
     console.log(score)
 
-    // set source for gameoverbanner
-    const gameOverSource = '/Guacamole.gif'
+
 
     // SET ALL CHIPS TO DISPLAY #TRUE
     const [missed1, setMissed1] = useState(true);
@@ -68,8 +70,8 @@ const Canvas = props => {
     }
 
     const newBoard = new Image()
-    newBoard.src = 'cuttingboard.png'
-    const small_avocado = 'small_avocado.png'
+    newBoard.src = cuttingBoard
+    
     const newAvocado = new Image()
     newAvocado.src = small_avocado
 
@@ -192,20 +194,14 @@ const Canvas = props => {
                  {missed4 &&  <Chip />}
                  {missed5 &&  <Chip />} 
                 </div>
+                <ScoreBoard score={score} />
                 {showGameOver && <img src={gameOverSource} alt="Game Over!" onClick={resetAvocados} width="700px" height="500px"/>}
-
+                
                 <div className="row">
                     <canvas id="canvas" onClick={handleClick} width="500px" height="500px" ref={canvasRef} {...props}/>
+                    <Guacamole />
                 </div>
-                <div className= "row">
-                    <div className = "col">
-                        <ScoreBoard score={score} />
-                    </div>
-                    <div className = "col">
-                        <Guacamole />
-                    </div>
-                </div>
-
+                
                 
             </div>  
     )

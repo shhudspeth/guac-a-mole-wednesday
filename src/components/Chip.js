@@ -1,5 +1,5 @@
 
-import chipImg from '../../public/tortilla.png'
+import chipImg from './assets/tortilla.png'
 const Chip = props => {
     
     

@@ -1,11 +1,11 @@
-
+import guacamoleBowl from "./assets/Guacamole.png"
 
 const Guacamole = props => {
     
-    const guacSource = '/Guacamole.png'
+    const guacSource = guacamoleBowl
     
     return  (<div className="guac" id="guacbowl">
-                <img src={guacSource} width="150px" height="150px" alt="guacamole-bowl"/>
+                <img src={guacSource} width="300px" height="300px" alt="guacamole-bowl"/>
             </div>)
 
 }
